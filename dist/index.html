@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="https://github.com/processing/p5.js/releases/download/0.5.6/p5.min.js">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Langton&#39;s Ant Playground</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="controls">
+  enter a rule below:<br>
+  <input type="text" id="ruleText" value="LRRRRRLLR"/><br>
+  <button id="run">run</button>
+  <button id="reset">reset</button>
+  <button id="random">random</button><br>
+  <button id = "modalBtn">guide</button><br>
+  speed: <input id="speedSlider" type="range" min="1" max="300" value="50"/>
+  <text id="speedText">50</text><br>
+  cell size: <input id="gridSlider" type="range" min="1" max="20" value="5"/>
+  <text id="gridText">5</text>
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+    Rules for Langtons Ant should be composed of "L" and "R" characters (non case sensitive). Any other characters will be ignored. An example rule would be "LLRR" which grows symmetrically from the origin. (hint: try LLLLRRRRRLLLRRRRRR or RRRLLLRRLLLRRRRLLLLLLL :)</p><br>
+    <p>
+    Any given rule sometimes results in a "highway" that repeats a particular pattern and continues in one direction. For instance, the default rule "LR" results in a highway in ~10000 steps </p><br>
+    <p>
+    For more on how rules work, check out <a href=
+"https://en.wikipedia.org/wiki/Langton%27s_ant#Extension_to_multiple_colors">https://en.wikipedia.org/wiki/Langton%27s_ant#Extension_to_multiple_colors</a></p><br>
+  <p>
+    Colors are picked randomly when a new rule is started. The number of colors directly correspond to the number of characters in the rule. The base case is always black. Reseting the ant will pick a new color palette.</p> 
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://github.com/processing/p5.js/releases/download/0.6.0/p5.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
